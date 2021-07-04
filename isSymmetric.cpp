@@ -13,7 +13,7 @@
  * };
  */
 
-//解法1:迭代法 时间复杂度 O(N) 空间复杂度O(N))
+//解法1:迭代法 时间复杂度 O(N) 空间复杂度O(N)
 class Solution {
 public:
     bool check(TreeNode* node1,TreeNode* node2){
@@ -33,6 +33,19 @@ public:
         return true;
     }
 
+    bool isSymmetric(TreeNode* root) {
+        return check(root,root);
+    }
+};
+
+//解法2:递归法 时间复杂度 O(N) 空间复杂度O(N))
+class Solution {
+public:
+    bool check(TreeNode* u,TreeNode* v) {
+        if(!u&&!v) return true;
+        if(!u||!v) return false;
+        return (u->val==v->val)&&check(u->left,v->right)&&check(u->right,v->left);
+    }
     bool isSymmetric(TreeNode* root) {
         return check(root,root);
     }
