@@ -26,3 +26,18 @@ public:
         return res;
     }
 };
+
+
+//官方简洁写法
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int tmp_min=prices[0];
+        int res=0;
+        for(int price:prices){
+            tmp_min=min(price,tmp_min);
+            res=max(price-tmp_min,res);
+        }
+        return res;
+    }
+};
