@@ -1,3 +1,6 @@
+//用两个栈实现队列
+// https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/
+
 //自己的写法，时间复杂度 O(N) 空间复杂度O(1)
 //问题，其实不需要把deleteHead的stack归位
 class CQueue {
